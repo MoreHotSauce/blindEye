@@ -4,8 +4,6 @@ from PIL import Image
 import numpy as np
 import cv2
 
-rImage = Image.open("./test.jpg")
-
 iYolo = YOLO()
 
 #get middle of the first found stop sign
