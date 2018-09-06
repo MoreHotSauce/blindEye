@@ -11,11 +11,11 @@ else:
     rval = False
 
 while rval:
-    cv2.imshow("preview", frame)
+    cv2.imshow("blindEye preview", frame)
     rval, frame = vc.read()
     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     im_pil = Image.fromarray(frame)
-    print(fr.getTotalDistance(im_pil))
+    print("Distance = " + str(fr.getTotalDistance(im_pil)))
     key = cv2.waitKey(20)
     if key == 27: # exit on ESC
         break
